@@ -1,0 +1,75 @@
+{
+  "name": "pi-spy",
+  "version": "1.0.0",
+  "description": "Basic video surveillance using Raspberry Pi, with our built in API",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon index.js",
+    "start:debug": "DEBUG=cfgram* nodemon index.js",
+    "start-db": "mkdir -p ./db && mongod --dbpath ./db",
+    "stop-db": "killall mongod",
+    "test": "jest --runInBand",
+    "test:exit": "jest --forceExit",
+    "test:watch": "jest --watchAll",
+    "lint": "eslint .",
+    "lint:test": "npm run lint && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arn1313/pi-spy.git"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./__test__/lib/jest-setup.js"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "keywords": [
+    "Raspberry Pi",
+    "Surveillance",
+    "JavaScript",
+    "Node",
+    "API"
+  ],
+  "devDependencies": {
+    "debug": "^3.0.1",
+    "eslint": "^4.5.0",
+    "faker": "^4.1.0",
+    "jest": "^20.0.4",
+    "superagent": "^3.6.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.114.0",
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "del": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^8.0.0",
+    "mongoose": "^4.11.10",
+    "multer": "^1.3.0"
+},
+  "author": "Team Pi-Spy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arn1313/pi-spy/issues"
+  },
+  "homepage": "https://github.com/arn1313/pi-spy#readme"
+}
