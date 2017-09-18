@@ -118,6 +118,8 @@ A list of all the Node Package Manager (npm) dependencies used to create Pi Spy,
 
 ## Necessary Hardware
 
+[Raspberry Pi](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=raspberry+pi&rh=i%3Aaps%2Ck%3Araspberry+pi)
+
 ## How To Report Bugs or Issues
 
 ## Credits And Thanks
