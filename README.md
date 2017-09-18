@@ -120,9 +120,23 @@ A list of all the Node Package Manager (npm) dependencies used to create Pi Spy,
 
 [Raspberry Pi](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=raspberry+pi&rh=i%3Aaps%2Ck%3Araspberry+pi)
 
+[Raspberry Pi Camera](https://www.amazon.com/s/ref=nb_sb_ss_c_1_17/138-1328889-4943430?url=search-alias%3Daps&field-keywords=raspberry+pi+camera&sprefix=raspberry+pi+came%2Caps%2C276&crid=10CCOQTP75UYV) **or** [USB WebCam](https://www.amazon.com/s/ref=nb_sb_ss_c_1_7?url=search-alias%3Daps&field-keywords=usb+webcam&sprefix=usb+web%2Caps%2C235&crid=2GEPPUYD1FJ98&rh=i%3Aaps%2Ck%3Ausb+webcam)
+
+[Power Supply](https://www.amazon.com/gp/product/B00GF9T3I0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00GF9T3I0&linkCode=as2&tag=pimylifeup-20&linkId=CGMZXY23TDV3MNP2)
+
+[SD Card](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=SD+card&rh=i%3Aaps%2Ck%3ASD+card) (8 GBs recommended) **or** [Micro SD Card](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=Micro+SD+card&rh=i%3Aaps%2Ck%3AMicro+SD+card) if using a Raspberry Pi 2, 3, or B+
+
+[Ethernet Cord](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Delectronics&field-keywords=ethernet+cord) **or** [WiFi Dongle](https://www.amazon.com/gp/product/B003MTTJOY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003MTTJOY&linkCode=as2&tag=pimylifeup-20&linkId=RL7CI6LMGRPD26NW)
+
+[Raspberry Pi Case](https://pimylifeup.com/raspberry-pi-cases)(Optional)
+
 ## How To Report Bugs or Issues
 
+Bugs and Issues can be reported through our GitHub repository located at https://github.com/arn1313/pi-spy/issues. To create a new issue, simply click the green "New Issue" button, and add a description of the issue or bug, with a method for replication if possible. If you want to contribute to the project, feel free to fork our repository and create a pull request, which will be reviewed by one of our team members. You will be credited for your contributions in our "Credits And Thanks" section of this README.
+
 ## Credits And Thanks
+
+Credits for this project idea are courtesy of https://pimylifeup.com/. Without their incredible tutorials and walk through, this project would not have been possible. Please support their page and contribute to their success! A special thanks to Scott Schmidt, for pointing out this project and giving us the opportunity to work with hardware.
 
 ## Upcoming Features
 
