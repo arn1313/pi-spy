@@ -2,19 +2,19 @@
 
 ## Table of Content
 
-1. About The Application
-2. How To Install
-3. How To Use
-4. User Sign Up
-5. User Sign In
-6. Accessing Surveillance Footage
-7. Deleting Surveillance Footage
-8. Pi Spy Dependencies
-9. Necessary Hardware
-10. How To Report Bugs or Issues
-11. Credits And Thanks
-12. Upcoming Features
-13. FAQs
+1. [About The Application](https://github.com/arn1313/pi-spy/blob/master/README.md#about-the-application)
+2. [How To Install](https://github.com/arn1313/pi-spy/blob/master/README.md#how-to-install)
+3. [How To Use](https://github.com/arn1313/pi-spy/blob/master/README.md#how-to-use)
+4. [User Sign Up](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-up)
+5. [User Sign In](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-in)
+6. [Accessing Surveillance Footage](https://github.com/arn1313/pi-spy/blob/master/README.md#accessing-surveillance-footage)
+7. [Deleting Surveillance Footage](https://github.com/arn1313/pi-spy/blob/master/README.md#deleting-surveillance-footage)
+8. [Pi Spy Dependencies](https://github.com/arn1313/pi-spy/blob/master/README.md#pi-spy-dependencies)
+9. [Necessary Hardware](https://github.com/arn1313/pi-spy/blob/master/README.md#necessary-hardware)
+10. [How To Report Bugs or Issues](https://github.com/arn1313/pi-spy/blob/master/README.md#how-to-report-bugs-or-issues)
+11. [Credits And Thanks](https://github.com/arn1313/pi-spy/blob/master/README.md#credits-and-thanks)
+12. [Upcoming Features](https://github.com/arn1313/pi-spy/blob/master/README.md#upcoming-features)
+13. [FAQs](https://github.com/arn1313/pi-spy/blob/master/README.md#faqs)
 
 ## About the Application
 
