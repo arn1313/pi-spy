@@ -1,4 +1,4 @@
-# Pi Spy
+![Pi Spy Logo](./img/pi_spy.png)
 
 ## Table of Content
 
@@ -141,3 +141,45 @@ Credits for this project idea are courtesy of https://pimylifeup.com/. Without t
 ## Upcoming Features
 
 ## FAQs
+**Why did we choose to build this project?** We chose to do this project based on our mutual fascination with the Raspberry Pi hardware and a desire to challenge ourselves.
+
+**What languages are used in this project?** Our code is written in JavaScript, although the setup files we used for the Raspberry Pi uses C, Python, and others.
+
+**How long did it take your team to construct this app?** This app took about 4 days to build.
+
+**Who is this app designed for?** We envision this as an app for the casual user who wants to surveil their home or desk and try out a fun project for Raspberry Pi. This app is probably unsuitable for professional surveillance use. We do not condone using this app for any kind of illegal surveillance activities.
+
+**What is the file format for videos?** Video is uploaded in mp4 file format.
+
+**Do I need a Google Drive account to use this app?** Yes. Because this app stores the webcamera's video files in Google Drive, you will need an account.
+
+**Who built this app?**
+Our team is comprised of:
+
++ **Aaron**:  
+[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/aaron-mcpeek-15826339/)
+
+![Aaron](./img/aaron.png)
+Aaron moved to Seattle from San Francisco in 1999.  He worked in retail and bank management for many years but transitioned into a role as an Office Manager and Paralegal in 2012. During that time he assisted on several high profile lawsuits including the Oso Land Slide case in Snohomish County. Earlier this year he decided that he needed a change and a career more inline with the direction Seattle has been moving. This led him to Code Fellows and a future in tech.
+
++ **Michelle**:
+  [![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/mscharlock/)
+
+![Michelle](./img/michelle.jpg)
+
+Michelle Scharlock is a Full Stack Javascript developer. Her life before tech included several formative years after graduating from McGill University  working for nonprofits, including the Ronald McDonald House of Western Washington and Alaska, Metropolitan Opera National Council Northwest, the Seattle Shakespeare Company, the Seattle Opera, and the America’s Music Festivals radio series just to name a few. In her spare time, she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.
+
++ **Shaun**:
+
+[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/shaun-wahle-75290044/)
+
+![Shaun](./img/shaun.jpg)
+
+
++ **Zach**:
+
+[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/zachary-johnson-17b177142/)
+
+![Zach](./img/zach.jpg)
+
+**Did this project win 401?** Yes, yes it did. :trophy:
