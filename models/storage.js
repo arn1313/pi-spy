@@ -13,6 +13,7 @@ const Storage = mongoose.Schema({
   userId : { type : mongoose.Schema.Types.ObjectId, required : true, ref: 'user'}
 }, {timestamps : true});
 
+debug('Debugging: Storage');
 //Export
 
 module.exports = mongoose.model('storage', Storage);

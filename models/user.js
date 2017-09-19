@@ -35,11 +35,12 @@ User.method.comparePasswordHash = function(password) {
 
 User.method.generateFindHash = function() {
   return new Promise((resolve, reject) => {
+    let tries;
     let _generateFindHash = () => {
       this.findHash = crypto.randomBytes(32).toString('hex');
       this.save()
         .then(() => resolve(this.findHash))
-        .catch(err => {
+        .catch( () => {
           if (tries > 3) return reject(new Error('authorization failed, findHash failed'));
           tries++;
           _generateFindHash();
