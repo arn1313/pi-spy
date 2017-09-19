@@ -5,6 +5,7 @@ db/
 build/
 *.env
 .*.env
+client_secret.json
 
 ### OSX ###
 .DS_Store
