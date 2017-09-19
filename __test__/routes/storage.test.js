@@ -3,7 +3,7 @@
 const faker = require('faker');
 const mocks = require('../lib/mocks');
 const server = require('../../lib/server');
-const Storage = require('../../model/storage');
+const Storage = require('../../models/storage');
 const superagent = require('superagent');
 require('jest');
 
