@@ -26,13 +26,23 @@ To install the Pi Spy API, either clone the repository and install all package.j
 
 ## How To Use
 
+Sign up for a user account, then sign in after all hardware has been configured. Once signed in, your camera will begin to stream live. To end stream, simply sign out. Once a user signs out, the stream will be captured, and pushed into our database. You can easily name your file streams, but it will default to the time the stream started, and appear in a folder for the day. For more information on creating a user account and signing in, see the following sections "User Sign Up", and "User Sign In".
+
 ## User Sign Up
+
+To create a user, certain parameters are required. Your name, a user name, your email address, and a password are all required. Your account will be assigned an ID for file storage purposes. For your security, all passwords are masked and hashed. After successful user account creation, a user can sign in and begin their camera. For instructions on user sign in, please refer to the next section.
 
 ## User Sign In
 
+To sign into your account, simply enter your email and password into the appropriate fields. Example below.
+
 ## Accessing Surveillance Footage
 
+Once a user signs in, the camera will instantly start up. To access previous footage, simply **DO THE THING**.
+
 ## Deleting Surveillance Footage
+
+**How? Do we delete from Drive? Or maybe MongoDB?**
 
 ## Pi Spy Dependencies
 
@@ -140,6 +150,9 @@ Credits for this project idea are courtesy of https://pimylifeup.com/. Without t
 
 ## Upcoming Features
 
+Features that Team Pi Spy would like to continue working on are..
+  * Email notification! Set up your camera to operate through motion sensors and if any videos are created, you will receive an email notification after file creation.
+
 ## FAQs
 **Why did we choose to build this project?** We chose to do this project based on our mutual fascination with the Raspberry Pi hardware and a desire to challenge ourselves.
 
@@ -151,7 +164,7 @@ Credits for this project idea are courtesy of https://pimylifeup.com/. Without t
 
 **What is the file format for videos?** Video is uploaded in mp4 file format.
 
-**Do I need a Google Drive account to use this app?** Yes. Because this app stores the webcamera's video files in Google Drive, you will need an account.
+**Do I need a Google Drive account to use this app?** Yes. Because this app stores the web camera's video files in Google Drive, you will need an account.
 
 **Who built this app?**
 Our team is comprised of:

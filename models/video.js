@@ -3,9 +3,15 @@
 const fs = require('fs');
 const del = require('del');
 const path = require('path');
+
+//Do we need storage anymore? isn't that what temp is going to be?
 const Storage = require('./storage');
+
 const mongoose = require('mongoose');
-const tempDir = `${__dirname}/../temp`
+
+//TODO  make a temp folder
+
+const tempDir = `${__dirname}/../temp`;
 const s3UploadProm = require('../lib/aws-s3');
 
 const Video = mongoose.Schema({
@@ -14,6 +20,10 @@ const Video = mongoose.Schema({
   videoURI: { type: String, required: true, unique: true },
   objectKey: { type: String, required: true, unique: true },
 }, {timestamps: true });
+
+
+//HUGE TODO We need to refactor every reference for S3 to Google Drive.
+
 
 Video.statics.upload = function(req) {
   return new Promise((resolve, reject) => {
@@ -24,24 +34,24 @@ Video.statics.upload = function(req) {
       ACL: 'public-read',
       Bucket: process.env.AWS_BUCKET,
       Key: `${req.file.filename}${path.extname(req.file.originalname)}`,
-      Body: fs.createReadStream(req.file.path);
-    }
+      Body: fs.createReadStream(req.file.path)
+    };
 
     return s3UploadProm(params)
-    .then(s3Data => {
-      del([`${tempDir}/*`]);
+      .then(s3Data => {
+        del([`${tempDir}/*`]);
 
-      let videoData = {
-        name: req.body.name,
-        desc: req.body.desc,
-        objectKey: s3Data.Key,
-        videoURI: s3Data.Location,
-        userId: req.user._id,
-        galleryId: req.body.galleryId,
-      }
-      resolve(videoData);
-    });
-    .catch(reject);
+        let videoData = {
+          name: req.body.name,
+          desc: req.body.desc,
+          objectKey: s3Data.Key,
+          videoURI: s3Data.Location,
+          userId: req.user._id,
+          galleryId: req.body.galleryId,
+        };
+        resolve(videoData);
+      })
+      .catch(reject);
   });
 };
 
