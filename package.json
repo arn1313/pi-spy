@@ -12,7 +12,7 @@
     "start:debug": "DEBUG=cfgram* nodemon index.js",
     "start-db": "mkdir -p ./db && mongod --dbpath ./db",
     "stop-db": "killall mongod",
-    "test": "jest --runInBand",
+    "test": "jest",
     "test:exit": "jest --forceExit",
     "test:watch": "jest --watchAll",
     "lint": "eslint .",
