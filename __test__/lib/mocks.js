@@ -27,16 +27,16 @@ mocks.user.createOne = function() {
       this.result.token = token;
       return this.result;
     });
-  };
+};
 
-  mocks.storage.removeAll = function() {
-    return Promise.all({
-      Storage.remove();
-    });
-  };
+mocks.storage.removeAll = function() {
+  return Promise.all([
+    Storage.remove()
+  ]);
+};
 
-  mocks.user.removeAll = function() {
-    return Promise.all({
-      User.remove();
-    });
-  };
+mocks.user.removeAll = function() {
+  return Promise.all([
+    User.remove()
+  ]);
+};
