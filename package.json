@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon index.js",
-    "start:debug": "DEBUG=cfgram* nodemon index.js",
+    "start:debug": "DEBUG=piSpy* nodemon index.js",
     "start-db": "mkdir -p ./db && mongod --dbpath ./db",
     "stop-db": "killall mongod",
     "test": "jest",
