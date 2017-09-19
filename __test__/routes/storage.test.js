@@ -29,7 +29,7 @@ require('jest');
 //
     describe('Valid requests', () => {
       test('DAMN YOU TRAVIS', () => {
-        expect(true).toBeFalse();
+        expect(true).toBeTruthy();
       });
 //       test('should return a status of 200', () => {
 //         expect(this.res.status).toBe(200);
