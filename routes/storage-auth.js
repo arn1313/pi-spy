@@ -1,5 +1,5 @@
-'use strict'; 
-const Storage = require('../model/storage');
+'use strict';
+const Storage = require('../models/storage');
 const jsonParser = require('body-parser').json();
 const errorHandler = require('../lib/error-handler');
 const debug = require('debug')('piSpy:storage-auth');

@@ -1,7 +1,7 @@
 'use strict';
 
-const User = require('../../model/user');
-const Storage = require('../../model/storage');
+const User = require('../../models/user');
+const Storage = require('../../models/storage');
 const faker = require('faker');
 
 const mocks = module.exports = {};
