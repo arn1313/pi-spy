@@ -5,7 +5,7 @@ var googleAuth = require('google-auth-library');
 
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/drive-nodejs-quickstart.json
-var SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly'];
+var SCOPES = ['https://www.googleapis.com/auth/drive'];
 var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
     process.env.USERPROFILE) + '/.credentials/';
 var TOKEN_PATH = TOKEN_DIR + 'drive-nodejs-quickstart.json';
@@ -99,12 +99,15 @@ function storeToken(token) {
  *
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
+
+
 function listFiles(auth) {
   var service = google.drive('v3');
-  service.files.list({
+  files = service.files.list({
     auth: auth,
-    pageSize: 10,
-    fields: 'nextPageToken, files(id, name)'
+    pageSize: 5,
+    fields: 'nextPageToken, files(id, name)',
+
   }, function(err, response) {
     if (err) {
       console.log('The API returned an error: ' + err);
@@ -122,3 +125,27 @@ function listFiles(auth) {
     }
   });
 }
+// let googs = google.drive('v3');
+// var files = googs.files;
+
+/**
+ * Lists the names and IDs of up to 10 files.
+ *
+ * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
+ */
+
+
+
+var fileId = '1gP7qc_PPoQjsqHtBNIfigf9RyWmiLjjZK2jvyqfH9uQ';
+var dest = fs.createWriteStream('resume.pdf');
+google.drive('v3').files.export({
+  fileId: fileId,
+  mimeType: 'application.pdf'
+})
+  .on('end', function () {
+    console.log('Done');
+  })
+  .on('error', function (err) {
+    console.log('Error during download', err);
+  })
+  .pipe(dest);
