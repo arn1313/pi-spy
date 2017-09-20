@@ -7,18 +7,16 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "live-server --port=8080 --host=localhost",
     "start:watch": "nodemon index.js",
     "start:debug": "DEBUG=piSpy* nodemon index.js",
     "start-db": "mkdir -p ./db && mongod --dbpath ./db",
     "stop-db": "killall mongod",
-    "test": "jest --runInBand",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "test:exit": "jest --forceExit",
     "test:watch": "jest --watchAll",
     "lint": "eslint .",
-    "lint:test": "npm run lint && npm test",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --port=8080 --host=localhost"
+    "lint:test": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
@@ -65,6 +63,7 @@
     "del": "^3.0.0",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
+    "googleapis": "^21.3.0",
     "jsonwebtoken": "^8.0.0",
     "live-server": "^1.2.0",
     "mongoose": "^4.11.10",
