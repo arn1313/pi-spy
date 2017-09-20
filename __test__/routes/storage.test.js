@@ -7,9 +7,9 @@ const server = require('../../lib/server');
 const superagent = require('superagent');
 require('jest');
 //
-// describe('Testing Storage Routes', function() {
-//   beforeAll(server.start);
-//   afterAll(server.stop);
+describe('Testing Storage Routes', function() {
+  beforeAll(server.start);
+  afterAll(server.stop);
 //   afterEach(mocks.user.removeAll);
 //   afterEach(mocks.storage.removeAll);
 //
