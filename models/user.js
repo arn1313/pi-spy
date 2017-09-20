@@ -33,18 +33,18 @@ User.method.comparePasswordHash = function(password) {
   });
 };
 
-User.method.generateFindHash = function() {
+User.methods.generateFindHash = function() {
   return new Promise((resolve, reject) => {
     let tries;
     let _generateFindHash = () => {
       this.findHash = crypto.randomBytes(32).toString('hex');
       this.save()
         .then(() => resolve(this.findHash))
-        .catch( () => {
+        .catch(err => {
+          console.log(err);
           if (tries > 3) return reject(new Error('authorization failed, findHash failed'));
           tries++;
           _generateFindHash();
-          //pick up here
         });
     };
 

@@ -1,22 +1,23 @@
 'use strict';
 
 const debug = require('debug')('piSpy:user-auth');
-const errorHandler = require('../lib/basic-auth');
+const errorHandler = require('../lib/error-handler');
 const basicAuth = require('../lib/basic-auth');
-const User = require('../model/user');
+const User = require('../models/user');
+const  bodyParser = require('body-parser').json();
 
 module.exports = function(router) {
-  router.post('/api/signup', (req, res) => {
+  router.post('/api/signup', bodyParser, (req, res) => {
     debug('POST /api/signup');
 
+    console.log(req.body);
     let pw = req.body.password;
     delete req.body.password;
 
     let newUser = new User(req.body);
 
     newUser.generatePasswordHash(pw)
-
-      .then(userA => userA.save())
+      .then(userA => userA.save() )
       .then(userB => userB.generateToken())
       .then(token => res.send(token))
       .catch(err => errorHandler(err, req, res));
