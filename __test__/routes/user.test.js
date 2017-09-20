@@ -10,7 +10,7 @@ require('jest');
 describe('Testing basic auth routes', function() {
   beforeAll(server.start);
   afterAll(server.stop);
-  afterEach(mocks.user.removeAll);
+  // afterEach(mocks.user.removeAll);
 
   describe('POST to api/signup', function() {
     beforeAll(() => {
