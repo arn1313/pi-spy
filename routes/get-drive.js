@@ -1,10 +1,9 @@
 'use strict';
 
-
 const User = require('../model/user');
 const errorHandler = require('../lib/error-handler');
 const debug = require('debug')('cfgram:route-gallery');
-const basicAuth = require('../lib/bearer-auth')
+const basicAuth = require('../lib/bearer-auth');
 const bearerAuth = require('../lib/bearer-auth');
 
 module.exports = function(router) {
