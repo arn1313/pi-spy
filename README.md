@@ -73,7 +73,7 @@ To create a user, certain parameters are required. Your name, a user name, your 
 Your account will be assigned an ID for file storage purposes. For your security, all passwords are masked and hashed. After successful user account creation, a user can sign in and begin their camera. For instructions on user sign in, please refer to the next section.
 
 A graphical interpretation of the User sign up process:
-![user sign up process](./img/Signup.png)
+![user sign up process](./img/SignUp.png)
 
 ## User Sign In
 ```
@@ -83,7 +83,7 @@ A graphical interpretation of the User sign up process:
 To sign into your account, simply enter your email and password into the appropriate fields. Example below.
 
 A graphical interpretation of the User sign in process:
-![user sign up process](./img/SigninFinal.png)
+![user sign up process](./img/SignIn.png)
 
 ## Accessing Surveillance Footage
 
@@ -235,4 +235,4 @@ Shaun is finishing Full-Stack Javascript Certificate at the Code Fellows Dev Boo
 
 Zach is a software developer, and former Army medic with a passion for learning and a track record of absorbing new information in a short amount of time. A positive team player, he enjoys tackling challenges with other people. Most recently, he began working on "Project Valor," a website which helps veterans find healthcare services nearest to them with the shortest wait time to see a doctor or mental health professional.
 
-**Are you obscenely proud of this project** Yes, yes we are. :trophy:
+**Are you obscenely proud of this project?** Yes, yes we are. :trophy:
