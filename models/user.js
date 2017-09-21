@@ -5,11 +5,19 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 
+let phoneMatch = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+
 const User = mongoose.Schema({
   username: { type: String, require: true, unique: true },
   name: { type: String, require: true },
   password: { type: String, required: true },
   email: { type: String, required: true },
+  address: { type: String },
+  phoneNumber: { type: String, match: phoneMatch },
+  status: { type: String },
+  userProfiledesc: { type: String },
+  userIcon: { type: String },
+  joinedDate: { type: Date }, 
   findHash: { type: String, unique: true },
 });
 
