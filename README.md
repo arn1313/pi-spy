@@ -34,9 +34,9 @@ Finally, you will need to set up (or use a prexisting) Google Drive account, whe
 
 After all hardware is in place, sign up for a user account with Pi-Spy. Next, authenticate your Google Drive account so your Raspberry Pi can store files there.  
 
-**SHAUN HALP**
+Google supports 02 Auth that will request you to sign in with your Google Drive account. From there it will dispense you a token to enter into the Pi-Spy UI. From now on your Drive and Pi-Spy Device will be connected.
 
-Once Google Drive authentication has taken place and you have signed in, your camera will begin to stream live. To end stream, simply sign out. Once a user signs out, the stream will be captured, and pushed to the Google Drive account you specified.
+Once Google Drive authentication has taken place and you have signed in, your camera will begin to stream live. To end stream, simply sign out or shutdown your camera. Once a user signs out, the stream will be captured, and pushed to the Google Drive account you specified. Pi-Spy will also notify you via email if there is movement in front of the camera.
 
 You can easily name your file streams, but it will default to the time the stream started, and appear in a folder for the day. For more information on creating a user account and signing in, see the following sections [User Sign Up](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-up) and [User Sign In](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-in).
 
