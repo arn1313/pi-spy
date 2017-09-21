@@ -135,17 +135,41 @@ function listFiles(auth) {
  */
 
 
+//creates new files hopefully with given params
+function getFile(auth) {
+  var drive = google.drive('v3');
+  var fileId = '1gP7qc_PPoQjsqHtBNIfigf9RyWmiLjjZK2jvyqfH9uQ';
+  var dest = fs.createWriteStream('resume.pdf');
+  drive.files.export({
+    auth: auth,
+    fileId: fileId,
+    mimeType: 'application.pdf'
+  })
+    .on('end', function () {
+      console.log('Done');
+    })
+    .on('error', function (err) {
+      console.log('Error during download', err);
+    })
+    .pipe(dest);
+}
+getFile();
 
-var fileId = '1gP7qc_PPoQjsqHtBNIfigf9RyWmiLjjZK2jvyqfH9uQ';
-var dest = fs.createWriteStream('resume.pdf');
-google.drive('v3').files.export({
-  fileId: fileId,
-  mimeType: 'application.pdf'
-})
-  .on('end', function () {
-    console.log('Done');
-  })
-  .on('error', function (err) {
-    console.log('Error during download', err);
-  })
-  .pipe(dest);
+
+//   function getFile(auth) {
+//     var drive = google.drive('v3');
+//     var fileId = '<FileId>';
+//     var dest = fs.createWriteStream('/desktop/test.xlsx');
+//     drive.files.export({
+//         auth: auth,
+//         fileId: fileId,
+//         mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+//     })
+//     .on('end', function() {
+//         console.log('Done');
+//     })
+//     .on('error', function(err) {
+//         console.log('Error during download', err);
+//     })
+//     .pipe(dest);
+// }
