@@ -105,7 +105,7 @@ function listFiles(auth) {
   var service = google.drive('v3');
   files = service.files.list({
     auth: auth,
-    pageSize: 5,
+    pageSize: 10,
     fields: 'nextPageToken, files(id, name)',
 
   }, function(err, response) {
@@ -135,41 +135,17 @@ function listFiles(auth) {
  */
 
 
-//creates new files hopefully with given params
-function getFile(auth) {
-  var drive = google.drive('v3');
-  var fileId = '1gP7qc_PPoQjsqHtBNIfigf9RyWmiLjjZK2jvyqfH9uQ';
-  var dest = fs.createWriteStream('resume.pdf');
-  drive.files.export({
-    auth: auth,
-    fileId: fileId,
-    mimeType: 'application.pdf'
+
+var fileId = '14641Txd1uJCb_aUl-vbAtjZ5Y-pE7HVjxgYUpTzplAg';
+var dest = fs.createWriteStream('resume.pdf');
+google.drive('v3').files.export({
+  fileId: fileId,
+  mimeType: 'application.pdf'
+})
+  .on('end', function () {
+    console.log('Done');
   })
-    .on('end', function () {
-      console.log('Done');
-    })
-    .on('error', function (err) {
-      console.log('Error during download', err);
-    })
-    .pipe(dest);
-}
-getFile();
-
-
-//   function getFile(auth) {
-//     var drive = google.drive('v3');
-//     var fileId = '<FileId>';
-//     var dest = fs.createWriteStream('/desktop/test.xlsx');
-//     drive.files.export({
-//         auth: auth,
-//         fileId: fileId,
-//         mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-//     })
-//     .on('end', function() {
-//         console.log('Done');
-//     })
-//     .on('error', function(err) {
-//         console.log('Error during download', err);
-//     })
-//     .pipe(dest);
-// }
+  .on('error', function (err) {
+    console.log('Error during download', err);
+  })
+  .pipe(dest);
