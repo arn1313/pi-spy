@@ -1,6 +1,5 @@
 'use strict';
 
-
 const get = require('../get');
 const findItem = require('../drive/find-item');
 const listFiles = require('../drive/list-files');
