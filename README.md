@@ -5,12 +5,12 @@
 1. [About The Application](https://github.com/arn1313/pi-spy/blob/master/README.md#about-the-application)
 2. [How To Install](https://github.com/arn1313/pi-spy/blob/master/README.md#how-to-install)
 3. [How To Use](https://github.com/arn1313/pi-spy/blob/master/README.md#how-to-use)
-4. [User Sign Up](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-up)
-5. [User Sign In](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-in)
-6. [Accessing Surveillance Footage](https://github.com/arn1313/pi-spy/blob/master/README.md#accessing-surveillance-footage)
-7. [Deleting Surveillance Footage](https://github.com/arn1313/pi-spy/blob/master/README.md#deleting-surveillance-footage)
-8. [Pi Spy Dependencies](https://github.com/arn1313/pi-spy/blob/master/README.md#pi-spy-dependencies)
-9. [Necessary Hardware](https://github.com/arn1313/pi-spy/blob/master/README.md#necessary-hardware)
+4. [Necessary Hardware](https://github.com/arn1313/pi-spy/blob/master/README.md#necessary-hardware)
+5. [User Sign Up](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-up)
+6. [User Sign In](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-in)
+7. [Accessing Surveillance Footage](https://github.com/arn1313/pi-spy/blob/master/README.md#accessing-surveillance-footage)
+8. [Deleting Surveillance Footage](https://github.com/arn1313/pi-spy/blob/master/README.md#deleting-surveillance-footage)
+9. [Pi Spy Dependencies](https://github.com/arn1313/pi-spy/blob/master/README.md#pi-spy-dependencies)
 10. [How To Report Bugs or Issues](https://github.com/arn1313/pi-spy/blob/master/README.md#how-to-report-bugs-or-issues)
 11. [Credits And Thanks](https://github.com/arn1313/pi-spy/blob/master/README.md#credits-and-thanks)
 12. [Upcoming Features](https://github.com/arn1313/pi-spy/blob/master/README.md#upcoming-features)
@@ -18,31 +18,80 @@
 
 ## About the Application
 
-Pi Spy is a user based video security and surveillance system built using Raspberry Pi. Users can create an account, sign in, and either live view or record via preset cameras. Notifications can be sent to a user via their registered e-mail. For required hardware to use application, see the "Necessary Hardware" section. For required dependencies for use of the Pi Spy project, see the "Pi Spy Dependencies" section. For all other questions, see the "FAQs" section.
+Pi Spy is a user-based, motion-activated video security and surveillance system built using Raspberry Pi using MotionEye and Google Drive. Users can create an account, sign in, and either live view or record via a preset USB camera. Files from the camera are stored on a user's Google Drive account.
+
+For required hardware to use application, see the [Necessary Hardware](https://github.com/arn1313/pi-spy/blob/master/README.md#necessary-hardware) section. For required dependencies for use of the Pi Spy project, see the [Pi Spy Dependencies](https://github.com/arn1313/pi-spy/blob/master/README.md#pi-spy-dependencies) section. For all other questions, see the [FAQs](https://github.com/arn1313/pi-spy/blob/master/README.md#faqs) section.
 
 ## How To Install
 
 To install the Pi Spy API, either clone the repository and install all package.json dependencies, or fork, clone, and install all dependencies.
 
+In order to use our app, you will also need to configure hardware such as the camera and Raspberry Pi, listed in our [Necessary Hardware](https://github.com/arn1313/pi-spy/blob/master/README.md#necessary-hardware) section. We recommend using the [PiUpMyLife tutorial](https://pimylifeup.com/raspberry-pi-security-camera/) to set up your Pi and associated hardware components.
+
+Finally, you will need to set up (or use a prexisting) Google Drive account, where the Raspberry Pi will store video and/or still images from the camera.
+
 ## How To Use
 
-Sign up for a user account, then sign in after all hardware has been configured. Once signed in, your camera will begin to stream live. To end stream, simply sign out. Once a user signs out, the stream will be captured, and pushed into our database. You can easily name your file streams, but it will default to the time the stream started, and appear in a folder for the day. For more information on creating a user account and signing in, see the following sections "User Sign Up", and "User Sign In".
+After all hardware is in place, sign up for a user account with Pi-Spy. Next, authenticate your Google Drive account so your Raspberry Pi can store files there.  
+
+Google supports 02 Auth that will request you to sign in with your Google Drive account. From there it will dispense you a token to enter into the Pi-Spy UI. From now on your Drive and Pi-Spy Device will be connected.
+
+Once Google Drive authentication has taken place and you have signed in, your camera will begin to stream live. To end stream, simply sign out or shutdown your camera. Once a user signs out, the stream will be captured, and pushed to the Google Drive account you specified. Pi-Spy will also notify you via email if there is movement in front of the camera.
+
+You can easily name your file streams, but it will default to the time the stream started, and appear in a folder for the day. For more information on creating a user account and signing in, see the following sections [User Sign Up](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-up) and [User Sign In](https://github.com/arn1313/pi-spy/blob/master/README.md#user-sign-in).
+
+## Necessary Hardware
+
+[Raspberry Pi](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=raspberry+pi&rh=i%3Aaps%2Ck%3Araspberry+pi)
+
+[Raspberry Pi Camera](https://www.amazon.com/s/ref=nb_sb_ss_c_1_17/138-1328889-4943430?url=search-alias%3Daps&field-keywords=raspberry+pi+camera&sprefix=raspberry+pi+came%2Caps%2C276&crid=10CCOQTP75UYV) **or** [USB WebCam](https://www.amazon.com/s/ref=nb_sb_ss_c_1_7?url=search-alias%3Daps&field-keywords=usb+webcam&sprefix=usb+web%2Caps%2C235&crid=2GEPPUYD1FJ98&rh=i%3Aaps%2Ck%3Ausb+webcam)
+
+[Power Supply](https://www.amazon.com/gp/product/B00GF9T3I0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00GF9T3I0&linkCode=as2&tag=pimylifeup-20&linkId=CGMZXY23TDV3MNP2)
+
+[SD Card](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=SD+card&rh=i%3Aaps%2Ck%3ASD+card) (8 GBs recommended) **or** [Micro SD Card](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=Micro+SD+card&rh=i%3Aaps%2Ck%3AMicro+SD+card) if using a Raspberry Pi 2, 3, or B+
+
+[Ethernet Cord](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Delectronics&field-keywords=ethernet+cord) **or** [WiFi Dongle](https://www.amazon.com/gp/product/B003MTTJOY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003MTTJOY&linkCode=as2&tag=pimylifeup-20&linkId=RL7CI6LMGRPD26NW)
+
+[Raspberry Pi Case](https://pimylifeup.com/raspberry-pi-cases)(Optional)
+
+We recommend assembling your hardware using the [PiUpMyLife tutorial](https://pimylifeup.com/raspberry-pi-security-camera/).  
+
+## How Hardware Integrates with Google Drive via Use Case Example
+In the below graph, a user has signed in and placed their camera next to a precious bag of Doritos. When their hungry roommate nears the bag, the Raspberry Pi (using MotionEye) senses the movement and generates a .mp4 video. This video is stored internally on the Pi and then uploaded to Google Drive in a matter of seconds. Using our front-end website, the user is able to see the hungry roommate video and take action to protect their Doritos.
+
+A graphical interpretation of the above use case:
+
+![user sign up process](./img/DoritosFinal.png)
 
 ## User Sign Up
+```
+**TBD EXAMPLE IN CODE**
+```
 
-To create a user, certain parameters are required. Your name, a user name, your email address, and a password are all required. Your account will be assigned an ID for file storage purposes. For your security, all passwords are masked and hashed. After successful user account creation, a user can sign in and begin their camera. For instructions on user sign in, please refer to the next section.
+To create a user, certain parameters are required. Your name, a user name, your email address, and a password are all required. Optional fields include an address, phone number, status, user profile description, user icon, and a joined date.
+
+Your account will be assigned an ID for file storage purposes. For your security, all passwords are masked and hashed. After successful user account creation, a user can sign in and begin their camera. For instructions on user sign in, please refer to the next section.
+
+A graphical interpretation of the User sign up process:
+![user sign up process](./img/Signup.png)
 
 ## User Sign In
+```
+**TBD EXAMPLE IN CODE**
+```
 
 To sign into your account, simply enter your email and password into the appropriate fields. Example below.
 
+A graphical interpretation of the User sign in process:
+![user sign up process](./img/SigninFinal.png)
+
 ## Accessing Surveillance Footage
 
-Once a user signs in, the camera will instantly start up. To access previous footage, simply **DO THE THING**.
+Once a user signs in, the camera will instantly start up. To access previous footage, simply visit the front-end website (to be located at www.pispy.services/ in the future), which displays the files via Google Drive's Picker.
 
 ## Deleting Surveillance Footage
 
-**How? Do we delete from Drive? Or maybe MongoDB?**
+To delete footage, simply delete it using tools available on the front-end through Google Drive's Picker.
 
 ## Pi Spy Dependencies
 
@@ -125,21 +174,6 @@ A list of all the Node Package Manager (npm) dependencies used to create Pi Spy,
 
     * Documentation can be found at https://www.npmjs.com/package/multer.
 
-
-## Necessary Hardware
-
-[Raspberry Pi](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=raspberry+pi&rh=i%3Aaps%2Ck%3Araspberry+pi)
-
-[Raspberry Pi Camera](https://www.amazon.com/s/ref=nb_sb_ss_c_1_17/138-1328889-4943430?url=search-alias%3Daps&field-keywords=raspberry+pi+camera&sprefix=raspberry+pi+came%2Caps%2C276&crid=10CCOQTP75UYV) **or** [USB WebCam](https://www.amazon.com/s/ref=nb_sb_ss_c_1_7?url=search-alias%3Daps&field-keywords=usb+webcam&sprefix=usb+web%2Caps%2C235&crid=2GEPPUYD1FJ98&rh=i%3Aaps%2Ck%3Ausb+webcam)
-
-[Power Supply](https://www.amazon.com/gp/product/B00GF9T3I0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00GF9T3I0&linkCode=as2&tag=pimylifeup-20&linkId=CGMZXY23TDV3MNP2)
-
-[SD Card](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=SD+card&rh=i%3Aaps%2Ck%3ASD+card) (8 GBs recommended) **or** [Micro SD Card](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=Micro+SD+card&rh=i%3Aaps%2Ck%3AMicro+SD+card) if using a Raspberry Pi 2, 3, or B+
-
-[Ethernet Cord](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Delectronics&field-keywords=ethernet+cord) **or** [WiFi Dongle](https://www.amazon.com/gp/product/B003MTTJOY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003MTTJOY&linkCode=as2&tag=pimylifeup-20&linkId=RL7CI6LMGRPD26NW)
-
-[Raspberry Pi Case](https://pimylifeup.com/raspberry-pi-cases)(Optional)
-
 ## How To Report Bugs or Issues
 
 Bugs and Issues can be reported through our GitHub repository located at https://github.com/arn1313/pi-spy/issues. To create a new issue, simply click the green "New Issue" button, and add a description of the issue or bug, with a method for replication if possible. If you want to contribute to the project, feel free to fork our repository and create a pull request, which will be reviewed by one of our team members. You will be credited for your contributions in our "Credits And Thanks" section of this README.
@@ -167,11 +201,11 @@ Features that Team Pi Spy would like to continue working on are..
 **Do I need a Google Drive account to use this app?** Yes. Because this app stores the web camera's video files in Google Drive, you will need an account.
 
 **Who built this app?**
-Our team is comprised of:
+Our team is comprised of 4 talented (and hireable!) developers:
 
 + **Aaron**:  
 
-[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/aaron-mcpeek-15826339/)
+[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/aaron-mcpeek-15826339/) [![View My Github](https://img.shields.io/badge/View%20My-Github-blue.svg)](https://github.com/arn1313)
 
 ![Aaron](./img/a.png)
 
@@ -179,23 +213,26 @@ Aaron moved to Seattle from San Francisco in 1999.  He worked in retail and bank
 
 + **Michelle**:
 
-  [![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/mscharlock/)
+[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/mscharlock/) [![View My Github](https://img.shields.io/badge/View%20My-Github-blue.svg)](https://github.com/mscharlock)
 
 ![Michelle](./img/m.png)
 
-Michelle Scharlock is a Full Stack Javascript developer. Her life before tech included several formative years after graduating from McGill University  working for nonprofits, including the Ronald McDonald House of Western Washington and Alaska, Metropolitan Opera National Council Northwest, the Seattle Shakespeare Company, the Seattle Opera, and the America’s Music Festivals radio series just to name a few. In her spare time, she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.
+Michelle Scharlock is a Full Stack Javascript developer, interested in becoming a Technical Program Manager. A strategic thinker and planning powerhouse, she brings insight to the surface and translates dev-speak for the non-technical. Along with being fluent in JavaScript, Michelle speaks French, German, and Italian thanks to her background as an opera singer. In her spare time (ha!), she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.
 
 + **Shaun**:
 
-[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/shaun-wahle-75290044/)
+[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/shaun-wahle-75290044/) [![View My Github](https://img.shields.io/badge/View%20My-Github-blue.svg)](https://github.com/Spwahle)
 
 ![Shaun](./img/s.png)
 
+Shaun is finishing Full-Stack Javascript Certificate at the Code Fellows Dev Bootcamp. He is currently working on supplementing his education through free-lance work and self-study. Web services and development are two of his passions, meaning he can work on anything from the back end of a web solution (NodeJS) to the front end (HTML, CSS, Javascript). When not coding, he can be found enjoying his homemade churros or giving wine tasting classes.
 
 + **Zach**:
 
-[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/zachary-johnson-17b177142/)
+[![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/zachary-johnson-17b177142/) [![View My Github](https://img.shields.io/badge/View%20My-Github-blue.svg)](https://github.com/zaj6827)
 
 ![Zach](./img/z.png)
 
-**Did this project win 401?** Yes, yes it did. :trophy:
+Zach is a software developer, and former Army medic with a passion for learning and a track record of absorbing new information in a short amount of time. A positive team player, he enjoys tackling challenges with other people. Most recently, he began working on "Project Valor," a website which helps veterans find healthcare services nearest to them with the shortest wait time to see a doctor or mental health professional.
+
+**Are you obscenely proud of this project** Yes, yes we are. :trophy:
