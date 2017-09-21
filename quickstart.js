@@ -4,6 +4,10 @@ var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 
 
+<<<<<<< HEAD
+=======
+module.exports = function() {
+>>>>>>> 9fc6471a7758961bb1a2186f8b6b8b217d04c864
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/drive-nodejs-quickstart.json
 var SCOPES = ['https://www.googleapis.com/auth/drive'];
@@ -94,7 +98,7 @@ function storeToken(token) {
   fs.writeFile(TOKEN_PATH, JSON.stringify(token));
   console.log('Token stored to ' + TOKEN_PATH);
 }
-
+};
 /**
  * Lists the names and IDs of up to 10 files.
  *
@@ -135,6 +139,7 @@ function listFiles(auth) {
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
 
+<<<<<<< HEAD
 
 
 var fileId = '14641Txd1uJCb_aUl-vbAtjZ5Y-pE7HVjxgYUpTzplAg';
@@ -150,3 +155,20 @@ google.drive('v3').files.export({
     console.log('Error during download', err);
   })
   .pipe(dest);
+=======
+//
+//
+// var fileId = '14641Txd1uJCb_aUl-vbAtjZ5Y-pE7HVjxgYUpTzplAg';
+// var dest = fs.createWriteStream('resume.pdf');
+// google.drive('v3').files.export({
+//   fileId: fileId,
+//   mimeType: 'application.pdf'
+// })
+//   .on('end', function () {
+//     console.log('Done');
+//   })
+//   .on('error', function (err) {
+//     console.log('Error during download', err);
+//   })
+//   .pipe(dest);
+>>>>>>> 9fc6471a7758961bb1a2186f8b6b8b217d04c864
