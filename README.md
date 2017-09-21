@@ -170,15 +170,18 @@ Features that Team Pi Spy would like to continue working on are..
 Our team is comprised of:
 
 + **Aaron**:  
+
 [![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/aaron-mcpeek-15826339/)
 
-![Aaron](./img/aaron.png)
+![Aaron](./img/a.png)
+
 Aaron moved to Seattle from San Francisco in 1999.  He worked in retail and bank management for many years but transitioned into a role as an Office Manager and Paralegal in 2012. During that time he assisted on several high profile lawsuits including the Oso Land Slide case in Snohomish County. Earlier this year he decided that he needed a change and a career more inline with the direction Seattle has been moving. This led him to Code Fellows and a future in tech.
 
 + **Michelle**:
+
   [![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/mscharlock/)
 
-![Michelle](./img/michelle.jpg)
+![Michelle](./img/m.png)
 
 Michelle Scharlock is a Full Stack Javascript developer. Her life before tech included several formative years after graduating from McGill University  working for nonprofits, including the Ronald McDonald House of Western Washington and Alaska, Metropolitan Opera National Council Northwest, the Seattle Shakespeare Company, the Seattle Opera, and the America’s Music Festivals radio series just to name a few. In her spare time, she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.
 
@@ -186,13 +189,13 @@ Michelle Scharlock is a Full Stack Javascript developer. Her life before tech in
 
 [![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/shaun-wahle-75290044/)
 
-![Shaun](./img/shaun.jpg)
+![Shaun](./img/s.png)
 
 
 + **Zach**:
 
 [![LinkedInProfile](https://img.shields.io/badge/LinkedIn-Profile-brightgreen.svg)](https://www.linkedin.com/in/zachary-johnson-17b177142/)
 
-![Zach](./img/zach.jpg)
+![Zach](./img/z.png)
 
 **Did this project win 401?** Yes, yes it did. :trophy:

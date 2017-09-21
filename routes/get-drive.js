@@ -1,19 +1,39 @@
-'use strict';
-
-
-const User = require('../model/user');
-const errorHandler = require('../lib/error-handler');
-const debug = require('debug')('cfgram:route-gallery');
-const basicAuth = require('../lib/bearer-auth')
-const bearerAuth = require('../lib/bearer-auth');
-
-module.exports = function(router) {
-
-  router.get('/api/gallery/:_id', bearerAuth, (req, res) => {
-    debug('GET /api/gallery/:_id');
-
-    return User.findById(req.params._id)
-      .then(gallery => res.json(gallery))
-      .catch(err => errorHandler(err, req, res));
+/**
+ * Print a file's metadata.
+ *
+ * @param {String} fileId ID of the file to print metadata for.
+ */
+function printFile(fileId) {
+  var request = gapi.client.drive.files.get({
+    'fileId': fileId
   });
-};
+  request.execute(function(resp) {
+    console.log('Title: ' + resp.title);
+    console.log('Description: ' + resp.description);
+    console.log('MIME type: ' + resp.mimeType);
+  });
+}
+
+/**
+ * Download a file's content.
+ *
+ * @param {File} file Drive File instance.
+ * @param {Function} callback Function to call when the request is complete.
+ */
+function downloadFile(file, callback) {
+  if (file.downloadUrl) {
+    var accessToken = gapi.auth.getToken().access_token;
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', file.downloadUrl);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+    xhr.onload = function() {
+      callback(xhr.responseText);
+    };
+    xhr.onerror = function() {
+      callback(null);
+    };
+    xhr.send();
+  } else {
+    callback(null);
+  }
+}
