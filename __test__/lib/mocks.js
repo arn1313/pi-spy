@@ -1,7 +1,6 @@
 'use strict';
 
 const User = require('../../models/user');
-const Storage = require('../../models/storage');
 const faker = require('faker');
 
 const mocks = module.exports = {};
@@ -10,7 +9,7 @@ mocks.storage = {};
 
 mocks.user.createOne = function() {
   this.result = {};
-  result.password = faker.internet.password();
+  this.result.password = faker.internet.password();
 
   let user = new User({
     username: faker.internet.userName(),
@@ -27,12 +26,6 @@ mocks.user.createOne = function() {
       this.result.token = token;
       return this.result;
     });
-};
-
-mocks.storage.removeAll = function() {
-  return Promise.all([
-    Storage.remove()
-  ]);
 };
 
 mocks.user.removeAll = function() {
