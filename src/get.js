@@ -1,6 +1,8 @@
 'use strict';
 
 const auth = require('./google-auth');
+require('../quickstart');
+
 
 const baseUrl = 'https://www.googleapis.com/drive/v3/';
 

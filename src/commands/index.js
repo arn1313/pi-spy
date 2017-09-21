@@ -1,4 +1,6 @@
+'use strict';
+
 module.exports = {
-	listFiles: require('./list-files'),
-	getFiles: require('./get-files'),
-}
+  listFiles: require('./list-files'),
+  getFiles: require('./get-files')
+};
