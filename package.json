@@ -2,14 +2,14 @@
   "name": "pi-spy",
   "version": "1.0.0",
   "description": "Basic video surveillance using Raspberry Pi, with our built in API",
-  "main": "index.js",
+  "main": "entry.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "start": "live-server --port=8080 --host=localhost",
-    "start:watch": "nodemon index.js",
-    "start:debug": "DEBUG=piSpy* nodemon index.js",
+    "start:watch": "nodemon entry.js",
+    "start:debug": "DEBUG=piSpy* nodemon entry.js",
     "start-db": "mkdir -p ./db && mongod --dbpath ./db",
     "stop-db": "killall mongod",
     "test": "echo \"Error: no test specified\" && exit 1",

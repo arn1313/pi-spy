@@ -14,6 +14,7 @@ mocks.user.createOne = function() {
   let user = new User({
     username: faker.internet.userName(),
     email: faker.internet.email(),
+    name: faker.name.firstName()
   });
 
   return user.generatePasswordHash(this.result.password)

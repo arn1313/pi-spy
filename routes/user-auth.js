@@ -10,7 +10,6 @@ module.exports = function(router) {
   router.post('/api/signup', bodyParser, (req, res) => {
     debug('POST /api/signup');
 
-    console.log(req.body);
     let pw = req.body.password;
     delete req.body.password;
 
