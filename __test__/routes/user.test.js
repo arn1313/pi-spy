@@ -33,7 +33,7 @@ describe('Testing User Routes', function() {
           .then(expect(this.res.status).toBe(200));
       });
 
-      xdescribe('invalid request', () => {
+      describe('invalid request', () => {
         test('should return a status of 400', () => {
           return superagent.post(`:4404/api/signup/${this.resPost.body.id}`)
             .send({ name: faker.name.firstName})
