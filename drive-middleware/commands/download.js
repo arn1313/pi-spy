@@ -37,5 +37,5 @@ module.exports = function(path, options) {
       files.map(file =>
         downloadFile(file, outputDir).then(()=>file.title)
       )
-    ));;
+    ));
 };
