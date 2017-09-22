@@ -2,7 +2,6 @@
 
 const faker = require('faker');
 const mocks = require('../lib/mocks');
-const User = require('../../models/user');
 const superagent = require('superagent');
 const server = require('../../lib/server');
 require('jest');
@@ -12,68 +11,48 @@ describe('Testing User Routes', function() {
   afterAll(server.stop);
   afterEach(mocks.user.removeAll);
 
-  describe('POST', function() {
+  describe('POST to /api/signup', function() {
     beforeAll(() => {
-      this.userFake = {
-        name : faker.name.firstName(),
-        username : faker.internet.userName(),
-        password: 'fakepass',
-        email: faker.internet.email()};
+      this.mockUserData = {
+        username: faker.internet.userName(),
+        password: faker.internet.password(),
+        email: faker.internet.email(),
+        name: faker.name.firstName(),
+      };
 
-      return mocks.user.createOne()
-        .then(userData => this.userData = userData)
-        .then(() => {
-          return superagent.post(':4404/api/signup')
-            .set('Authorization', `Bearer ${this.userData.token}`)
-            .send(this.userFake);
-        })
+      return superagent.post(':4404/api/signup')
+        .send(this.mockUserData)
         .then(res => this.res = res)
         .catch(console.error);
     });
+    test('should respond with a token', () => {
+      expect(this.res.text).toBeTruthy();
+      expect(this.res.text.length > 1).toBeTruthy();
+    });
+    test('should return a status of 200', () => {
+      expect(this.res.status).toBe(200);
+    });
+  });
 
-    describe('Valid requests', () => {
-      test('should return a status of 201', () => {
-        return superagent.post(':4404/api/signup')
-          .send({
-            name : faker.name.firstName(),
-            username : faker.internet.userName(),
-            password: 'fakepass',
-            email: faker.internet.email()})
-          .then(expect(this.res.status).toBe(200));
-      });
+  describe('GET to /api/signin', function() {
+    beforeAll(() => {
+      return mocks.user.createOne()
+        .then(userData => {
+          this.tempUser = userData.user;
 
-      xdescribe('invalid request', () => {
-        test('should return a status of 400', () => {
-          return superagent.post(':4404/api/signup')
-            .send({ name: 'a thing'})
-            .then(expect(this.res.status).toBe(400));
+          return superagent.get(':4404/api/signin')
+            .auth(userData.user.username, userData.password)
+            .then(res => this.res = res);
         });
-      });
     });
 
-    describe('GET', function() {
-      describe('valid requests', () => {
-        beforeAll(() => {
-          return mocks.user.createOne()
-            .then(userData => {
-              this.tempUser = userData.user;
-
-              return superagent.get(':4444/api/signin')
-                .auth(userData.user.username, userData.password)
-                .then(res => this.res = res);
-            });
-        });
-        test('should return a 200 status', () => {
-          (expect(this.res.status).toBe(200));
-        });
-      });
+    test('should return a token', () => {
+      expect(this.res.text).toBeTruthy();
+      expect(this.res.text.length > 1).toBeTruthy();
     });
 
-    xdescribe('invalid request', () => {
-      test('should return a 404', () => {
-        return superagent.get(':4404/api/signup/fakepath')
-          .then(expect(this.res.status).toBe(404));
-      });
+    test('should return a status of 200', () => {
+      expect(this.res.status).toBe(200);
     });
   });
 });
