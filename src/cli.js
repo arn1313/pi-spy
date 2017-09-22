@@ -2,7 +2,6 @@
 
 var verifyDate = require('./src/verify-date');
 var gdrive = require('./src/commands');
-require('./quickstart.js');
 
 
 var yargs = require('yargs')

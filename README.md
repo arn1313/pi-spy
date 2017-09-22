@@ -227,7 +227,7 @@ Michelle Scharlock is a Full Stack Javascript developer, interested in becoming 
 
 ![Shaun](./img/s.png)
 
-Shaun is finishing Full-Stack Javascript Certificate at the Code Fellows Dev Bootcamp. He is currently working on supplementing his education through free-lance work and self-study. Web services and development are two of his passions, meaning he can work on anything from the back end of a web solution (NodeJS) to the front end (HTML, CSS, Javascript). When not coding, he can be found enjoying his homemade churros or giving wine tasting classes.
+Shaun is finishing Full-Stack Javascript Certificate at the Code Fellows Dev Bootcamp. He is currently working on supplementing his education through free-lance work and self-study. Web services and development are two of his passions, meaning he can work on anything from the back end of a web solution (NodeJS) to the front end (HTML, CSS, Javascript). When not coding, he can be found enjoying his homemade churros, traveling, motorcyling, or giving wine tasting classes.
 
 + **Zach**:
 

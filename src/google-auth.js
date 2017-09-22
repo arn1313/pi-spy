@@ -2,7 +2,8 @@
 
 const request = require('request');
 const googleauth = require('googleauth');
-require('../quickstart');
+var googleAuths = require('google-auth-library');
+
 
 
 var cache;
