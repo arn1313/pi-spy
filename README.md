@@ -64,8 +64,9 @@ A graphical interpretation of the above use case:
 ![user sign up process](./img/DoritosFinal.png)
 
 ## User Sign Up
+Code example:
 ```
-**TBD EXAMPLE IN CODE**
+http POST :3000/api/signup name=harry username=potterman123 password=lumos email=harry@hogwarts.com
 ```
 
 To create a user, certain parameters are required. Your name, a user name, your email address, and a password are all required. Optional fields include an address, phone number, status, user profile description, user icon, and a joined date.
@@ -76,8 +77,9 @@ A graphical interpretation of the User sign up process:
 ![user sign up process](./img/SignUp.png)
 
 ## User Sign In
+Code example:
 ```
-**TBD EXAMPLE IN CODE**
+http GET localhost:3000/api/signin/potterman123
 ```
 
 To sign into your account, simply enter your email and password into the appropriate fields. Example below.
