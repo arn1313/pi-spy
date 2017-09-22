@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "nodemon entry.js",
+    "start": "node entry.js",
     "start:watch": "nodemon entry.js",
     "start:debug": "DEBUG=piSpy* nodemon entry.js",
     "start-db": "mkdir -p ./db && mongod --dbpath ./db",
