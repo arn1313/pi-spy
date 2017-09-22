@@ -3,4 +3,4 @@
 require('dotenv').config();
 require('./lib/server').start();
 require('./quickstart.js');
-require('./src/cli.js');
+// require('./src/cli.js');
