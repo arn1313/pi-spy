@@ -180,7 +180,7 @@ Bugs and Issues can be reported through our GitHub repository located at https:/
 
 ## Credits And Thanks
 
-Credits for this project idea are courtesy of https://pimylifeup.com/. Without their incredible tutorials and walk through, this project would not have been possible. Please support their page and contribute to their success! A special thanks to Scott Schmidt, for pointing out this project and giving us the opportunity to work with hardware.
+Credits for this project idea are courtesy of https://pimylifeup.com/. Without their incredible tutorials and walk through, this project would not have been possible. Please support their page and contribute to their success! A special thanks to Scott Schmidt, for pointing out this project and giving us the opportunity to work with hardware. Thank you to Katherine for helping us valiantly with tests!
 
 ## Upcoming Features
 
