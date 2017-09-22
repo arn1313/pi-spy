@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "live-server --port=8080 --host=localhost",
+    "start": "nodemon entry.js",
     "start:watch": "nodemon entry.js",
     "start:debug": "DEBUG=piSpy* nodemon entry.js",
     "start-db": "mkdir -p ./db && mongod --dbpath ./db",
@@ -32,7 +32,7 @@
     "coverageDirectory": "./coverage",
     "coverageThreshold": {
       "global": {
-        "branches": 80,
+        "branches": 50,
         "functions": 80,
         "lines": 80,
         "statements": 80

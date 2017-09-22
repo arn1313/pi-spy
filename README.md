@@ -1,6 +1,8 @@
 ![Pi Spy Logo](./img/pi_spy.png)
 
-## Table of Content
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/arn1313/pi-spy/master/LICENSE) ![Build Passing](https://img.shields.io/badge/build-passing-green.svg)
+
+## Table of Contents
 
 1. [About The Application](https://github.com/arn1313/pi-spy/blob/master/README.md#about-the-application)
 2. [How To Install](https://github.com/arn1313/pi-spy/blob/master/README.md#how-to-install)
@@ -182,7 +184,7 @@ Bugs and Issues can be reported through our GitHub repository located at https:/
 
 ## Credits And Thanks
 
-Credits for this project idea are courtesy of https://pimylifeup.com/. Without their incredible tutorials and walk through, this project would not have been possible. Please support their page and contribute to their success! A special thanks to Scott Schmidt, for pointing out this project and giving us the opportunity to work with hardware. Thank you to Katherine for helping us valiantly with tests!
+Credits for this project idea are courtesy of https://pimylifeup.com/. Without their incredible tutorials and walk through, this project would not have been possible. Please support their page and contribute to their success! A special thanks to Scott Schmidt, for pointing out this project and giving us the opportunity to work with hardware. Thank you to Katherine for helping us with tests!
 
 ## Upcoming Features
 
