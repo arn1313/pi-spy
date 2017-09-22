@@ -10,14 +10,14 @@ let phoneMatch = /^[2-9]\d{2}-\d{3}-\d{4}$/;
 const User = mongoose.Schema({
   username: { type: String, require: true, unique: true },
   name: { type: String, require: true },
-  password: { type: String, required: true },
-  email: { type: String, required: true },
+  password: { type: String, require: true },
+  email: { type: String, require: true },
   address: { type: String },
   phoneNumber: { type: String, match: phoneMatch },
   status: { type: String },
   userProfiledesc: { type: String },
   userIcon: { type: String },
-  joinedDate: { type: Date }, 
+  joinedDate: { type: Date },
   findHash: { type: String, unique: true },
 });
 
@@ -31,7 +31,7 @@ User.methods.generatePasswordHash = function(password) {
   });
 };
 
-User.method.comparePasswordHash = function(password) {
+User.methods.comparePasswordHash = function(password) {
   return new Promise((resolve, reject) => {
     bcrypt.compare(password, this.password, (err, valid) => {
       if(err) return reject(err);
@@ -42,17 +42,13 @@ User.method.comparePasswordHash = function(password) {
 };
 
 User.methods.generateFindHash = function() {
-  return new Promise((resolve, reject) => {
-    let tries;
+  return new Promise((resolve) => {
     let _generateFindHash = () => {
       this.findHash = crypto.randomBytes(32).toString('hex');
       this.save()
         .then(() => resolve(this.findHash))
         .catch(err => {
           console.log(err);
-          if (tries > 3) return reject(new Error('authorization failed, findHash failed'));
-          tries++;
-          _generateFindHash();
         });
     };
 
@@ -73,11 +69,3 @@ User.methods.generateToken = function() {
 };
 
 module.exports = mongoose.model('user', User);
-// User Schema Creation.
-// id, username, name, password, email.
-// name and username same thing?
-
-
-//Connect User Schema to Storage.
-
-//Export to MongoDB.
